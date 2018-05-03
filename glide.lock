@@ -1,6 +1,0 @@
-hash: f19f00b419b0b1cc7ecf626ae23b943f639a1652108cd67fd0158970696cb9ce
-updated: 2018-05-03T23:22:05.660854197+07:00
-imports:
-- name: github.com/mkideal/cli
-  version: 0bc4738ef26827a45d3b50394d84d283f733ad63
-testImports: []

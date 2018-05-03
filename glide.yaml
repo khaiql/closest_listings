@@ -1,4 +1,0 @@
-package: github.com/khaiql/neareast_coordinates
-import:
-- package: github.com/mkideal/cli
-  version: ~0.0.1
