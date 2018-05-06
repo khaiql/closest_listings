@@ -2,6 +2,9 @@
 
 ## Getting started
 
+1. `go build`
+2. `./closest_listings -filepath data/geoData.csv`
+
 ## Arguments
 
 - --top [number]
