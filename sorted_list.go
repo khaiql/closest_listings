@@ -51,7 +51,7 @@ func (s *SortedList) TopWithScore(n int64) []*Element {
 	for count < n && node != nil {
 		results[count] = &Element{Value: node.value, Score: node.score}
 		node = node.next
-		count += 1
+		count++
 	}
 
 	return results
@@ -75,7 +75,7 @@ func (s *SortedList) checkCap() {
 		newTail.next = nil
 		currentTail.prev = nil
 		s.tail = newTail
-		s.len -= 1
+		s.len--
 	}
 }
 
@@ -85,7 +85,7 @@ func (s *SortedList) checkCap() {
 // Space complexity: O(1)
 func (s *SortedList) Insert(score float64, value interface{}) {
 	n := &node{score: score, value: value}
-	s.len += 1
+	s.len++
 	if s.head == nil {
 		s.head = n
 		s.tail = n

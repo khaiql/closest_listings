@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	// EARTH_RADIUS https://www.google.com.vn/search?q=eath+radius&oq=eath+radius&aqs=chrome..69i57j0l5.2911j0j4&sourceid=chrome&ie=UTF-8
-	EARTH_RADIUS = 6371
+	// EarthRadius https://www.google.com.vn/search?q=eath+radius&oq=eath+radius&aqs=chrome..69i57j0l5.2911j0j4&sourceid=chrome&ie=UTF-8
+	EarthRadius = 6371
 )
 
 func degreeToRadian(d float64) float64 {
@@ -20,8 +20,9 @@ type Coordinate struct {
 	Lng float64
 }
 
-func (c *Coordinate) String() string {
-	return fmt.Sprintf("(%v,%v)", c.Lat, c.Lng)
+// String implements fmt.Stringer interface
+func (p *Coordinate) String() string {
+	return fmt.Sprintf("(%v,%v)", p.Lat, p.Lng)
 }
 
 // GreatCircleDistance uses formula from https://en.wikipedia.org/wiki/Great-circle_distance to calculate spherical
@@ -35,5 +36,5 @@ func (p Coordinate) GreatCircleDistance(p2 Coordinate) float64 {
 
 	c := 2 * math.Asin(math.Sqrt(a1+a2))
 
-	return EARTH_RADIUS * c
+	return EarthRadius * c
 }
