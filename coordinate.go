@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	// EarthRadius https://www.google.com.vn/search?q=eath+radius&oq=eath+radius&aqs=chrome..69i57j0l5.2911j0j4&sourceid=chrome&ie=UTF-8
+	// EarthRadius https://www.google.com/search?q=earth+radius
 	EarthRadius = 6371
 )
 

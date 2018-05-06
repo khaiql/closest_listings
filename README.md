@@ -1,9 +1,11 @@
-# Find top 5 closest places
+# Find top closest listings
+[![Build Status](https://travis-ci.org/khaiql/closest_listings.svg?branch=master)](https://travis-ci.org/khaiql/closest_listings)
 
 ## Getting started
 
+1. `git clone git@github.com:khaiql/closest_listings.git $GOPATH/src/github.com/khaiql/closest_listings`
 1. `go build`
-2. `./closest_listings -filepath data/geoData.csv`
+1. `./closest_listings -filepath data/geoData.csv`
 
 ## Flags
 
