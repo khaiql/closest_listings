@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 const (
 	// EARTH_RADIUS https://www.google.com.vn/search?q=eath+radius&oq=eath+radius&aqs=chrome..69i57j0l5.2911j0j4&sourceid=chrome&ie=UTF-8
@@ -15,6 +18,10 @@ func degreeToRadian(d float64) float64 {
 type Coordinate struct {
 	Lat float64
 	Lng float64
+}
+
+func (c *Coordinate) String() string {
+	return fmt.Sprintf("(%v,%v)", c.Lat, c.Lng)
 }
 
 // GreatCircleDistance uses formula from https://en.wikipedia.org/wiki/Great-circle_distance to calculate spherical
