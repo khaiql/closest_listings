@@ -5,10 +5,10 @@
 1. `go build`
 2. `./closest_listings -filepath data/geoData.csv`
 
-## Arguments
+## Flags
 
-- --top [number]
-- --datasource [csv,mysql,postgres]
-- --csvfile [path]
-- --connection [database connection string]
-- --command [string command to fetch data]
+- --top [5]
+- --datasource [csv]
+- --filepath 
+- --long [4.478617]
+- --lat [51.925146]

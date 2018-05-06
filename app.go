@@ -17,7 +17,8 @@ var (
 func configureApp() *cli.App {
 	app := cli.NewApp()
 	app.Version = "0.0.1"
-	app.Name = "Find Closest Listings"
+	app.Name = "closest_listings"
+	app.Usage = "Find closest listings from a specific coordinate. Data is fetched from csv"
 	app.Flags = []cli.Flag{
 		cli.Int64Flag{
 			Name:  "top",
@@ -34,14 +35,14 @@ func configureApp() *cli.App {
 			Usage: "path to csv file, only used when datasource=csv",
 		},
 		cli.Float64Flag{
-			Name:  "long",
-			Value: 4.478617,
-			Usage: "Longitude of the place",
-		},
-		cli.Float64Flag{
 			Name:  "lat",
 			Value: 51.925146,
-			Usage: "Longitude of the place",
+			Usage: "Longitude of the initial place",
+		},
+		cli.Float64Flag{
+			Name:  "long",
+			Value: 4.478617,
+			Usage: "Longitude of the initial place",
 		},
 	}
 	app.Action = applogic
